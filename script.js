@@ -2,10 +2,10 @@ const image = document.querySelector('img');
 const title = document.getElementById('title');
 const artist = document.getElementById('artist');
 const music = document.querySelector('audio');
-const progressContainer = document.getElementById('progress-container');
-const progress = document.getElementById('progress');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
+const progress = document.getElementById('progress');
+const progressContainer = document.getElementById('progress-container');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
@@ -13,24 +13,29 @@ const nextBtn = document.getElementById('next');
 // Music
 const songs = [
 	{
-		name: 'hellraiser',
-		displayName: 'Hellraiser',
-		artist: 'Ozzy Osbourne & Lemmy Kilmister',
+		name: 'calmness',
+		displayName: 'Calmness',
+		artist: 'IsaevllnarMusic',
 	},
 	{
-		name: 'kickstart',
-		displayName: 'Kickstart My Heart',
-		artist: 'Mötley Crüe',
+		name: 'late-night-latte',
+		displayName: 'Late Night Latte',
+		artist: 'Alex GL',
 	},
 	{
-		name: 'loveGun',
-		displayName: 'Love Gun',
-		artist: 'KISS',
+		name: 'summer-lofi',
+		displayName: 'Summer Lofi',
+		artist: 'SFRecords',
 	},
 	{
-		name: 'somebody',
-		displayName: 'Somebody Save Me',
-		artist: 'Cinderella',
+		name: 'vibes',
+		displayName: 'Vibes',
+		artist: 'Omka',
+	},
+	{
+		name: 'warm-feeling',
+		displayName: 'Warm Feeling',
+		artist: 'AHOAMI',
 	},
 ];
 
@@ -94,7 +99,7 @@ loadSong(songs[songIndex]);
 function updateProgressBar(e) {
 	if (isPlaying) {
 		const { duration, currentTime } = e.srcElement;
-		// Update Progress Bar Width
+		// Update progress bar width
 		const progressPercent = (currentTime / duration) * 100;
 		progress.style.width = `${progressPercent}%`;
 		// Calculate display for duration
@@ -107,7 +112,7 @@ function updateProgressBar(e) {
 		if (durationSeconds) {
 			durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
 		}
-		// Calculate display for current time
+		// Calculate display for currentTime
 		const currentMinutes = Math.floor(currentTime / 60);
 		let currentSeconds = Math.floor(currentTime % 60);
 		if (currentSeconds < 10) {
@@ -117,7 +122,7 @@ function updateProgressBar(e) {
 	}
 }
 
-//  Set Progress Bar
+// Set Progress Bar
 function setProgressBar(e) {
 	const width = this.clientWidth;
 	const clickX = e.offsetX;

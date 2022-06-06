@@ -1,3 +1,5 @@
+/* Images created by: https://unsplash.com/@pawel_czerwinski */
+
 @import url('https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap');
 
 html {
@@ -7,8 +9,7 @@ html {
 body {
 	margin: 0;
 	min-height: 100vh;
-	/* background: #c9ced3; */
-	background: #2b333b;
+	background: #c9ced3;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -16,19 +17,36 @@ body {
 	font-size: 12px;
 }
 
+/* Footer */
+footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #242323;
+	text-align: center;
+	height: auto;
+	width: 100vw;
+	padding-top: 10px;
+	color: #fff;
+}
+a {
+	text-decoration: none !important;
+	color: inherit;
+}
+
 .player-container {
-	margin-top: 40px;
+	margin-top: 10px;
 	height: 500px;
 	width: 400px;
-	/* background-color: #e6e6e6; */
-	background: #4e575f;
+	background: #e7e7e7;
 	border-radius: 20px;
 	box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
 }
 
 .img-container {
-	height: 300px;
 	width: 300px;
+	height: 300px;
 	position: relative;
 	top: -50px;
 	left: 50px;
@@ -44,14 +62,12 @@ body {
 
 h2 {
 	font-size: 25px;
-	color: #f7f7f7;
 	text-align: center;
 	margin: 0;
 }
 
 h3 {
 	font-size: 20px;
-	color: #e6e6e6;
 	text-align: center;
 	font-weight: 400;
 	margin: 5px 0 0;
@@ -59,8 +75,7 @@ h3 {
 
 /* Progress */
 .progress-container {
-	/* background: #fff; */
-	background: rgb(129, 129, 129);
+	background: #fff;
 	border-radius: 5px;
 	cursor: pointer;
 	margin: 40px 20px;
@@ -69,18 +84,15 @@ h3 {
 }
 
 .progress {
-	/* background: #242323; */
-	background: #ff3030;
+	background: #242323;
 	border-radius: 5px;
 	height: 100%;
-	/* change this to show progress */
 	width: 0%;
 	transition: width 0.1s linear;
 }
 
 .duration-wrapper {
 	position: relative;
-	color: #f7f7f7;
 	top: -25px;
 	display: flex;
 	justify-content: space-between;
@@ -96,17 +108,14 @@ h3 {
 
 .fas {
 	font-size: 30px;
-	/* color: rgb(129, 129, 129); */
-	color: #ff3030;
+	color: rgb(129, 129, 129);
 	margin-right: 30px;
 	cursor: pointer;
 	user-select: none;
-	/* transition: all 0.2s ease-in-out; */
 }
 
 .fas:hover {
 	filter: brightness(80%);
-	/* transform: scale(1.05); */
 }
 
 .main-button {
@@ -115,11 +124,21 @@ h3 {
 	top: 3px;
 }
 
+/* Footer */
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgb(129, 129, 129);
+	color: white;
+	text-align: center;
+}
+
 /* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 376px) {
 	.player-container {
-		width: 90vw;
-		margin-top: 10px;
+		width: 95vw;
 	}
 
 	.img-container {
